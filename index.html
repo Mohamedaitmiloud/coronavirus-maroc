@@ -1,0 +1,139 @@
+
+<!doctype html>
+<html lang="ar">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mohamed Aitmiloud">
+    <title>كورونا بالمغرب</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Mada:400,500,700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+
+
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+    </style>
+    
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+        <div class="lds-ripple"><div></div><div></div></div> <h3 class="masthead-brand">كورونا بالمغرب</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link active" href="#">مستجدات</a>
+        <a class="nav-link" href="#">طرق الحماية</a>
+        
+      </nav>
+    </div>
+  </header>
+  
+  <main role="main" id="app">
+    <a href="tel://0801004747" onclick="gtag('event','080 100 47 47',{'event_category':'الو اليقظة','event_label':'0801004747'});"><img style="height: 70px; margin-bottom: 10px;" src="allo.png"></a>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col order-3">
+            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header"> الوفيات</div>
+                <div class="card-body">
+                  <h2 class="card-title">{{ deaths}}</h2>
+                </div>
+              </div>
+          </div>
+          <div class="col order-2">
+            <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                <div class="card-header">في حاله حرجه </div>
+                <div class="card-body">
+                  <h2 class="card-title">{{critical}}</h2>
+                </div>
+              </div>
+          </div>
+          <div class="col order-1">
+    
+            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                <div class="card-header">المتعافون</div>
+                <div class="card-body">
+                  <h2 class="card-title">{{recovered}}</h2>
+                </div>
+              </div>
+          </div>
+          <div class="col ">
+            <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+                <div class="card-header">الحالات المؤكدة</div>
+                <div class="card-body">
+                  <h2 class="card-title">{{ cases }}</h2>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>تم تطوير هذه المنصة من طرف محمد ايت ميلود </p>
+    </div>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
