@@ -4,7 +4,9 @@ var app = new Vue({
       cases : 0,
       recovered : 0,
       deaths : 0,
-      critical : 0
+      critical : 0,
+      casesToday : 0,
+      deathsToday: 0
     },
     methods:{
         getAllData:function(){
@@ -13,7 +15,9 @@ var app = new Vue({
                             this.cases = response.data.cases;
                             this.recovered = response.data.recovered;
                             this.deaths = response.data.deaths;
-                            this.critical = response.data.critical;     
+                            this.critical = response.data.critical;
+                            this.casesToday = response.data.todayCases;
+                            this.deathsToday = response.data.todayDeaths;     
                  })
                  .catch(function (error) {
                     // handle error

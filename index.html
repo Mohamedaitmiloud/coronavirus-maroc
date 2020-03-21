@@ -74,11 +74,12 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
-        <div class="lds-ripple"><div></div><div></div></div> <h3 class="masthead-brand">كورونا بالمغرب</h3>
+        <!-- <div class="lds-ripple"><div></div><div></div></div>  -->
+        <h3 class="masthead-brand mb-5">كورونا بالمغرب</h3>
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="#">مستجدات</a>
+        <!-- <a class="nav-link active" href="#">مستجدات</a>
         <a class="nav-link" href="#">طرق الحماية</a>
-        <a class="nav-link" href="#">اعراض الاصابة </a>
+        <a class="nav-link" href="#">اعراض الاصابة </a> -->
         
       </nav>
     </div>
@@ -88,11 +89,12 @@
     <a href="tel://0801004747" onclick="gtag('event','080 100 47 47',{'event_category':'الو اليقظة','event_label':'0801004747'});"><img style="height: 70px; margin-bottom: 10px;" src="assets/allo.png"></a>
     <div class="container-fluid">
         <div class="row">
-          <div class="col order-3">
+          <div class="col order-1">
             <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
                 <div class="card-header"> الوفيات</div>
                 <div class="card-body">
                   <h2 class="card-title">{{ deaths}}</h2>
+                  <p class="card-text">اليوم : {{ deathsToday }}</p>
                 </div>
               </div>
           </div>
@@ -104,7 +106,7 @@
                 </div>
               </div>
           </div>
-          <div class="col order-1">
+          <div class="col order-3">
     
             <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
                 <div class="card-header">المتعافون</div>
@@ -118,6 +120,7 @@
                 <div class="card-header">الحالات المؤكدة</div>
                 <div class="card-body">
                   <h2 class="card-title">{{ cases }}</h2>
+                  <p class="card-text">اليوم : {{ casesToday }}</p>
                 </div>
               </div>
           </div>
